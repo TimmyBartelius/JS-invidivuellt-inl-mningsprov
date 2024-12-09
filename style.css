@@ -25,10 +25,10 @@ body {
   background-color: rgb(95, 94, 94);
   border-radius: 10px;
   padding: 0.75rem;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 3px 1px black;
 }
 #menytexten {
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 3px 1px black;
 }
 #fantaOrangeBtn,
 #fantaExoticBtn,
@@ -47,7 +47,7 @@ body {
   background-color: rgb(139, 139, 139);
   color: white;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 2px 3px black;
 }
 #upper {
   border: solid 3px rgb(139, 139, 139);
