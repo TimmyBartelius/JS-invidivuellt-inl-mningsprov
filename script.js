@@ -19,3 +19,4 @@ async function getApiKey() {
     console.error("Error fetching api key", error);
   }
 }
+getApiKey();
