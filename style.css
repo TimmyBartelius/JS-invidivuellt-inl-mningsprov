@@ -49,3 +49,13 @@ body {
   font-weight: bold;
   text-shadow: 1px 1px 1px black;
 }
+#upper {
+  border: solid 3px rgb(139, 139, 139);
+  padding: 16px;
+  border-radius: 12px;
+}
+#lower {
+  border: solid 3px rgb(95, 94, 94);
+  padding: 16px;
+  border-radius: 12px;
+}
