@@ -51,11 +51,19 @@ body {
 }
 #upper {
   border: solid 3px rgb(139, 139, 139);
-  padding: 16px;
   border-radius: 12px;
+  padding: 1rem;
 }
 #lower {
   border: solid 3px rgb(95, 94, 94);
-  padding: 16px;
   border-radius: 12px;
+  padding: 1rem;
+}
+#shoppingCart {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.4rem;
+  padding: 20px;
 }
