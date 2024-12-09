@@ -10,8 +10,8 @@ async function getApiKey() {
     });
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
-      console.log("Hejsan, jag funkar!");
     }
+    console.log("Det fungerar");
 
     const data = await response.json();
     console.log("API key:", data);
