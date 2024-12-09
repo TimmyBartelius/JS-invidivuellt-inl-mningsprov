@@ -3,36 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css"></link>
     <title>Matapp</title>
   </head>
   <body>
+    <div class="cart" id="shopping-cart">
+        <button id="shoppingCart"></button>
+    </div>
+    <article class="menysystem">
     <section class="menyValMat">
-      <h1>MENY</h1>
-      <p id="matval-1"></p>
-      <p id="matval-2"></p>
-      <p id="matval-3"></p>
-      <p id="matval-4"></p>
-      <p id="matval-5"></p>
+      <h1 id="menytexten">MENY</h1>
+      <div class="matval-1">
+      <h3>KARLSTAD..............9SEK</h3>
+      <p id="matbeskrivning1">Kantarell, scharlottenlök, morot, bladpersilja</p>
+      </div>
+      <div class="matval-2">
+        <h3>BANGKOK..............9SEK</h3>
+        <p id="matbeskrivning2">Morot, salladslök, chili, kokos, lime, koriander</p>
+        </div>
+        <div class="matval-3">
+            <h3>HO CHI MINH..............9SEK</h3>
+            <p id="matbeskrivning3">Kål, salladslök, chili, vitlök, ingefära, tofu</p>
+            </div>
+            <div class="matval-4">
+                <h3>PARIS..............9SEK</h3>
+                <p id="matbeskrivning4">Kål, chevré, honung, basilika, valnötspasta</p>
+                </div>
+                <div class="matval-5">
+                    <h3>OAXACA..............9SEK</h3>
+                    <p id="matbeskrivning5">Majs, tomat, rostade ärtor, vitlök, lime</p>
+                    </div>
     </section>
     <section class="menyValDip">
-      <h1>DIPSÅS</h1>
+      <h1>DIPSÅS...................19SEK</h1>
+      <div class="dipBtns">
       <button id="sweetChiliBtn">Sweet Chili</button>
       <button id="wontonStdBtn">Wonton STD</button>
-      <button id="sweet&sourBtn">Sweet & Sour</button>
-      <button id="hotMangeBtn">Hot Mango</button>
+      <button id="sweetsourBtn">Sweet & Sour</button>
+      <button id="hotMangoBtn">Hot Mango</button>
       <button id="chiliMayoBtn">Chilimayo</button>
       <button id="guacamoleBtn">Guacamole</button>
+      </div>
     </section>
     <section class="menyValDricka">
-      <h1>DRICKA</h1>
+      <h1>DRICKA......................19SEK</h1>
+      <div class="drinkBtns">
       <button id="fantaOrangeBtn">Fanta Orange</button>
       <button id="fantaExoticBtn">Fanta Exotic</button>
       <button id="cocaColaBtn">Coca-cola</button>
       <button id="spriteBtn">Sprite</button>
       <button id="lokaGranatBtn">LOKA Granatäpple</button>
       <button id="lokaCitrusBtn">LOKA Citrus</button>
+      </div>
     </section>
+</article>
     <script src="script.js"></script>
   </body>
 </html>
