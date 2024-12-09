@@ -10,6 +10,7 @@ async function getApiKey() {
     });
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
+      console.log("Hejsan, jag funkar!");
     }
 
     const data = await response.json();
