@@ -9,7 +9,7 @@ const drink = "drink";
 const dip = "dip";
 let lastOrderData = null;
 
-//getting the menu items and calling the correct function
+//Tar menyns items och ser till att det hamnar i rätt ordning
 async function fetchMenuItems(type) {
   const Url = `https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu?type=${type}`;
   const items = await getMenuItems(Url);
@@ -23,10 +23,8 @@ async function fetchMenuItems(type) {
   }
 }
 
-//Creating the menu items and showing them
+//Skapar meny-items och visar dem
 function createMenu(items) {
-  // console.log(items);
-
   items.forEach((item) => {
     const menuItem = document.createElement("button");
     menuItem.classList.add("menu-item");
@@ -62,7 +60,7 @@ function createMenu(items) {
   });
 }
 
-//Creating the submenus and showing them
+//Skapar sub-menyn och visar innehåll
 function createSubMenu(items) {
   items.forEach((item) => {
     const subMenuItem = document.createElement("button");
@@ -77,7 +75,7 @@ function createSubMenu(items) {
     subMenuSelections.appendChild(subMenuItem);
   });
 
-  //making sure prices are updated correctly
+  //Priser, uppdateras och räknas
   const dipItem = items.find((item) => item.type === "dip");
   const drinkItem = items.find((item) => item.type === "drink");
 
@@ -92,7 +90,7 @@ function createSubMenu(items) {
   }
 }
 
-//makes an order and calls to update eta
+//Gör en order och uppdaterar ETA
 async function handleOrder() {
   try {
     const data = await placeOrder(cartManager);
@@ -104,7 +102,7 @@ async function handleOrder() {
   }
 }
 
-//updates eta screen
+//Uppdaterar ETA
 function updateEta(data) {
   const etaElement = document.querySelector(".time-estimate");
   const orderIdElement = document.querySelector(".order-id");
@@ -122,7 +120,7 @@ function updateEta(data) {
   handleReceipt(lastOrderData);
 }
 
-//reset the page to make a new order
+//Reset
 function resetOrder() {
   cartManager.resetCart();
   updateCart();
@@ -134,7 +132,6 @@ function resetOrder() {
   });
 }
 
-//Buttons
 function handleButtons() {
   const submenuButtons = document.querySelectorAll(".submenu-item");
   const menuButtons = document.querySelectorAll(".menu-item");
@@ -193,7 +190,7 @@ receiptResetBUtton.addEventListener("click", () => {
   resetOrder();
 });
 
-//Switching between different views
+//Byter vyer
 const menuSection = document.querySelector("#menu");
 const cartSection = document.querySelector("#cart");
 const etaSection = document.querySelector("#eta");
@@ -238,7 +235,7 @@ cartButton.addEventListener("click", () => {
   document.body.classList.add("white");
 });
 
-// load on startup
+//Laddar upp vid start av sidan från API
 async function loadMenu() {
   await fetchMenuItems(wonton);
   await fetchMenuItems(drink);

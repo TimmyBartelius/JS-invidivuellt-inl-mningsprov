@@ -108,23 +108,24 @@ export function updateCart() {
     totalPrice += item.price * item.quantity;
     totalItems += item.quantity;
   });
-  const payButton = document.querySelector(".pay-button");
+  const payButton = document.querySelector(".pay-button"); //Betala knappen
 
-  const totalPriceElement = document.querySelector(".total-price");
+  const totalPriceElement = document.querySelector(".total-price"); //Sammanställning av pris
   totalPriceElement.innerText = `${totalPrice} SEK`;
 
   const totalItemsElement = document.querySelector(".total-items");
   if (totalItems <= 0) {
-    totalItemsElement.classList.add("display-none");
+    totalItemsElement.classList.add("display-none"); //Om totalt antal items = 0, ingen display
 
-    payButton.innerText = "VARUKORGEN ÄR TOM!";
+    payButton.innerText = "VARUKORGEN ÄR TOM!"; //Texten på knappen (om tom)
     payButton.disabled = true;
     payButton.classList.remove("active");
   } else {
+    //ANNARS tas display-none bort och vi ser;
     totalItemsElement.classList.remove("display-none");
     totalItemsElement.innerText = totalItems;
 
-    payButton.innerText = "TAKE MY MONEY!";
+    payButton.innerText = "TAKE MY MONEY!"; //Texten på knappen
     payButton.disabled = false;
     payButton.classList.add("active");
   }
