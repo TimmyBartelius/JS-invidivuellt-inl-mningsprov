@@ -10,7 +10,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 1px 1px 1px black;
 }
 
 :root {

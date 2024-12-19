@@ -1,4 +1,4 @@
-import { getReceipt } from "./fetching.js";
+import { getReceipt } from "./fetch.js";
 
 export async function handleReceipt(data) {
   if (!data || !data.order || !data.order.id) {

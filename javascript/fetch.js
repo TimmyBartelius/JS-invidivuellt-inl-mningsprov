@@ -3,8 +3,10 @@ import { cartManager } from "./cart.js";
 const APIkey = "yum-NKsTcw3OPrMQPoSz";
 const tenant = "epjp";
 let wontonItems = [];
+//Hämta från nyckeln och en egen tenant, sätt items på 0/eller "tom"
 
 const apiUrl = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
+//Ser till att det går att gå vidare - dubbelkolla detta
 
 async function getMenuItems(Url) {
   try {
@@ -26,6 +28,7 @@ async function getMenuItems(Url) {
     return [];
   }
 }
+//Hämtar menyns beställningsvaror eller ger tillbaka error beroende på responsen
 
 async function placeOrder(cartManager) {
   const orderData = {
@@ -33,7 +36,6 @@ async function placeOrder(cartManager) {
       .getCartItems()
       .flatMap((item) => Array(item.quantity).fill(Number(item.id))),
   };
-  // console.log("placing order", orderData)
   try {
     const options = {
       method: "POST",
@@ -44,7 +46,8 @@ async function placeOrder(cartManager) {
       body: JSON.stringify(orderData),
     };
 
-    // console.log("Order data before sending:", JSON.stringify(orderData));
+    //Funktion för att lägga en order som hamnar i cart/cartmanager
+
     const response = await fetch(`${apiUrl}${tenant}/orders`, options);
 
     if (!response.ok) {
@@ -54,7 +57,6 @@ async function placeOrder(cartManager) {
     }
 
     const data = await response.json();
-    // console.log('Order placed sucsessfully', data);
     return data;
   } catch (error) {
     console.error("Error placing order", error.message);
@@ -62,13 +64,13 @@ async function placeOrder(cartManager) {
   }
 }
 
+//if NOT response.ok = vänta på response, skriv ut error response, byt ut respons-status
+
 async function getReceipt(data) {
   if (!data || !data.order || !data.order.id) {
     throw new Error("Invalid data provided. Missing order ID.");
   }
-
   const orderId = data.order.id;
-  // console.log('fetching receipt for orderId:', orderId)
   try {
     const options = {
       method: "GET",
@@ -77,6 +79,9 @@ async function getReceipt(data) {
         "x-zocom": APIkey,
       },
     };
+    //get receipt = if NOTdata OR NOTdata.order OR NOTdata.order.id
+    //Try get, application/Json, "x-zocom":APIkey
+    //Hämta igen om saker inte funkar basically
 
     const response = await fetch(`${apiUrl}/receipts/${orderId}`, options);
 
@@ -89,5 +94,6 @@ async function getReceipt(data) {
     console.error("Error geting receipt", error.message);
   }
 }
+//Läs på mer om fetch - vad allt detta innebär och gör!!!
 
 export { getMenuItems, placeOrder, getReceipt };

@@ -1,4 +1,4 @@
-const apiKey = "yum-NKsTcw3OPrMQPoSz";
+const apiKey = "yum-NKsTcw3OPrMQPoSz"; //min egen unika nyckelkod
 
 async function getApiKey() {
   const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/keys";
@@ -22,3 +22,4 @@ async function getApiKey() {
   }
 }
 // getApiKey();
+//Funktionen för att få nyckeln och vad som händer om den inte får någon respons
