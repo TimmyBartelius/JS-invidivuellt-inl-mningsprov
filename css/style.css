@@ -1,69 +1,50 @@
 body {
-  background-color: rgb(71, 160, 76);
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--mainGreen);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+:root {
+  --mainGreen: #489078;
+  --lightGray: #605858;
+  --lightGray2: #958d8d;
+  --darkGray: #353131;
+  --mainWhite: #e9e8e5;
+  --mainRed: #eb5757;
+}
+
+#cart.display-flex,
+#menu.display-flex,
+#eta.display-flex,
+#receipt-section.display-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-  padding: 1rem;
 }
-.menyValMat,
-.menyValDip,
-.menyValDricka {
-  padding: 15px;
-  margin-top: 40px;
-  margin-bottom: 10px;
+
+.total-items.display-none {
+  display: none;
 }
-.matval-1,
-.matval-2,
-.matval-3,
-.matval-4,
-.matval-5,
-.menyValDip,
-.menyValDricka {
-  border: solid rgb(139, 139, 139) 1px;
-  background-color: rgb(95, 94, 94);
-  border-radius: 10px;
-  padding: 0.75rem;
-  text-shadow: 1px 3px 1px black;
+
+.green {
+  background-color: var(--mainGreen);
 }
-#menytexten {
-  text-shadow: 1px 3px 1px black;
+
+.gray {
+  background-color: var(--darkGray);
 }
-#fantaOrangeBtn,
-#fantaExoticBtn,
-#cocaColaBtn,
-#spriteBtn,
-#lokaGranatBtn,
-#lokaCitrusBtn,
-#sweetChiliBtn,
-#wontonStdBtn,
-#sweetsourBtn,
-#hotMangoBtn,
-#chiliMayoBtn,
-#guacamoleBtn {
-  padding: 8px;
-  border-radius: 9px;
-  background-color: rgb(139, 139, 139);
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 2px 3px black;
+
+.light-gray {
+  background-color: var(--lightGray);
 }
-#upper {
-  border: solid 3px rgb(139, 139, 139);
-  border-radius: 12px;
-  padding: 1rem;
-}
-#lower {
-  border: solid 3px rgb(95, 94, 94);
-  border-radius: 12px;
-  padding: 1rem;
-}
-#shoppingCart {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1.4rem;
-  padding: 20px;
+
+.white {
+  background-color: var(--mainWhite);
 }

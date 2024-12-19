@@ -1,0 +1,11 @@
+.animated-item {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+  opacity: 1;
+}
+
+.animated-item.fade-out {
+  opacity: 0;
+}

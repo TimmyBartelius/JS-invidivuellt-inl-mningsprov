@@ -1,0 +1,134 @@
+#cart {
+  display: none;
+  flex-direction: column;
+  background-color: var(--mainWhite);
+  padding: 1rem;
+  height: 100vh;
+}
+
+.icon-container {
+  display: flex;
+  height: 6rem;
+  justify-content: right;
+}
+
+#cart-icon {
+  max-width: 2rem;
+}
+
+.cart-item-inner,
+.cart-item-counter {
+  display: flex;
+}
+
+.cart-item {
+  color: var(--darkGray);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cart-item * {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dotted-cart-divider {
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--darkGray);
+}
+
+.cart-item:not(:last-child) {
+  border-bottom: 1px dotted rgba(1, 1, 1, 0.479);
+}
+
+.cart-item-counter {
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.amount {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.add-button,
+.remove-button {
+  background-color: #a7a7a7;
+  border: none;
+  border-radius: 100%;
+  height: 1em;
+  width: 1em;
+  font-weight: 200;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-button:hover,
+.remove-button:hover {
+  background-color: #898888;
+}
+
+.cart-bottom-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 1rem;
+}
+
+.price-info {
+  background-color: var(--lightGray2);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.total-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.total-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pay-button {
+  background-color: var(--darkGray);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--mainWhite);
+  padding: 1.8rem;
+  transition: scale 0.2s ease-in-out;
+}
+
+.pay-button:hover {
+  scale: 1.05;
+}
+
+.active {
+  cursor: pointer;
+}
+
+.cart-return-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border: 2px solid var(--darkGray);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.cart-return-button:hover {
+  scale: 1.1;
+}

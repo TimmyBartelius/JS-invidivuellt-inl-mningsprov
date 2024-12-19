@@ -1,0 +1,146 @@
+#menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--mainGreen);
+  margin: auto;
+  padding: 1rem;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.cart-box {
+  display: flex;
+  height: 6rem;
+  justify-content: right;
+}
+
+.cart-button {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--mainWhite);
+  position: relative;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.cart-button:hover {
+  scale: 1.1;
+}
+
+.total-items {
+  background-color: var(--mainRed);
+  color: var(--mainWhite);
+  font-size: 0.8rem;
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+#menu-header {
+  color: var(--mainWhite);
+  font-size: 2rem;
+  text-shadow: 1px 1.5px 1px rgba(0, 0, 0, 0.911);
+}
+
+#menu-container,
+.submenu-container {
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: var(--lightGray);
+}
+
+.menu-item {
+  color: var(--mainWhite);
+  padding: 0.8rem;
+  background: 0;
+  border: none;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
+.menu-item:hover,
+.submenu-item:hover {
+  background-color: var(--darkGray);
+}
+
+.menu-item:first-child {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.menu-item:last-child {
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.menu-item:not(:last-child) {
+  border-bottom: dotted 1.5px rgba(255, 255, 255, 0.329);
+}
+
+.menu-item-inner,
+.submenu-inner {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.menu-item-inner *,
+.submenu-inner * {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: var(--mainWhite);
+  text-transform: uppercase;
+}
+
+.ingredients {
+  font-size: 14px;
+}
+
+.dotted-divider {
+  border-bottom: dotted 2px var(--mainWhite);
+  flex-grow: 1;
+}
+
+.submenu-item {
+  border: none;
+  color: var(--mainWhite);
+  background-color: #898383;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submenu-selections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.submenu-inner {
+  margin-bottom: 1rem;
+}
+
+.submenu-container {
+  padding: 0.8rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+@media (hover: none) {
+  .menu-item:hover {
+    background-color: initial; /* Remove hover styles */
+  }
+  .submenu-item:hover {
+    background-color: #898383;
+  }
+}

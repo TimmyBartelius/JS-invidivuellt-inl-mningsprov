@@ -1,0 +1,60 @@
+#eta {
+  background-color: var(--lightGray);
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  color: var(--mainWhite);
+  gap: 1rem;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.eta-img-container {
+  overflow: hidden;
+}
+.wonton-box {
+  max-width: 30rem;
+  margin-top: 5rem;
+}
+
+.order-id {
+  text-transform: uppercase;
+}
+
+.eta-header {
+  text-align: center;
+  font-size: 2rem;
+  max-width: 15rem;
+}
+
+.eta-button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 1rem;
+  width: 100%;
+}
+
+.eta-buttons {
+  background-color: var(--darkGray);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--mainWhite);
+  padding: 1.5rem;
+  transition: scale 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.eta-buttons:hover {
+  scale: 1.05;
+}
+
+.eta-buttons.receipt {
+  background-color: var(--lightGray);
+  border: 2px solid var(--mainWhite);
+  color: var(--mainWhite);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.911);
+}
