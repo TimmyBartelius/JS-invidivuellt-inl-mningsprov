@@ -1,6 +1,6 @@
 import { cartManager } from "./cart.js";
 
-const APIkey = "yum-NKsTcw3OPrMQPoSz";
+const APIkey = "yum-NKsTcw3OPrMQPoSz"; //Min egen API nyckel
 const tenant = "epjp";
 let wontonItems = [];
 //Hämta från nyckeln och en egen tenant, sätt items på 0/eller "tom"
@@ -46,7 +46,7 @@ async function placeOrder(cartManager) {
       body: JSON.stringify(orderData),
     };
 
-    //Funktion för att lägga en order som hamnar i cart/cartmanager
+    //Funktion för att lägga en order som hamnar i cart/cartmanager/nästa "sida"
 
     const response = await fetch(`${apiUrl}${tenant}/orders`, options);
 
@@ -80,8 +80,6 @@ async function getReceipt(data) {
       },
     };
     //get receipt = if NOTdata OR NOTdata.order OR NOTdata.order.id
-    //Try get, application/Json, "x-zocom":APIkey
-    //Hämta igen om saker inte funkar basically
 
     const response = await fetch(`${apiUrl}/receipts/${orderId}`, options);
 
@@ -94,6 +92,6 @@ async function getReceipt(data) {
     console.error("Error geting receipt", error.message);
   }
 }
-//Läs på mer om fetch - vad allt detta innebär och gör!!!
+//Läs på mer om fetch // REMINDER
 
 export { getMenuItems, placeOrder, getReceipt };

@@ -15,7 +15,7 @@ export function animateToCart(buttonElement) {
   // clone.style.width = `${itemRect.width}px`;
   // clone.style.height = `${itemRect.height}px`;
 
-  //Del 1 av Vilmers kod
+  //Del av Vilmers kod
 
   const ball = document.createElement("div");
   ball.classList.add("animated-ball");
@@ -53,7 +53,7 @@ export function animateToCart(buttonElement) {
     }, 900);
   });
 
-  //Tog hjälp av Vilmers kod för animationen men gjorde min egen där det är en röd boll istället för att all text hänger med - grundade såklart på Vilmers kod som syns ovan. Lämnar kvar den som referensmall
+  //Tog hjälp av Vilmers kod för animationen men gjorde min egen där det är en röd boll istället för att all text hänger med - grundade min kod på Vilmers kod som syns ovan. Lämnar kvar den som referensmall/facit
 
   requestAnimationFrame(() => {
     const translateX =
@@ -78,4 +78,3 @@ export function animateToCart(buttonElement) {
     }, 900);
   });
 }
-//Del 2 av Vilmers kod

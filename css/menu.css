@@ -138,7 +138,7 @@
 
 @media (hover: none) {
   .menu-item:hover {
-    background-color: initial; /*Tar bort hover-style*/
+    background-color: initial;
   }
   .submenu-item:hover {
     background-color: #898383;

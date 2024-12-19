@@ -1,7 +1,9 @@
-const cart = [];
+const cart = []; //cart = tom
 
 export const cartManager = {
+  //exportera constant cartManager från API
   addItem(name, price, type, id) {
+    //använd namn, pris, typ och id från API
     const existingItem = cart.find((item) => item.name === name);
 
     if (existingItem) {
@@ -9,7 +11,7 @@ export const cartManager = {
     } else {
       cart.push({ id, name, price, type, quantity: 1 });
     }
-  },
+  }, //Om Item = 1 eller mer, push till cart +1
 
   removeItem(name) {
     const itemIndex = cart.findIndex((item) => item.name === name);
@@ -24,28 +26,30 @@ export const cartManager = {
 
   getTotalPrice() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
-  },
+  }, //Få sammansatt pris, total + item.price * item.quantity, 0
 
   getCartItems() {
     return [...cart];
-  },
+  }, //returnera värdet
 
   resetCart() {
     cart.length = 0;
   },
-};
+}; //Ställ om cart/reset
 
 export function updateCart() {
   const cartItems = cartManager.getCartItems();
   const cartInnerContainer = document.querySelector("#cart-inner-container");
-  cartInnerContainer.innerHTML = "";
+  cartInnerContainer.innerHTML = ""; //exportera function updateCart från API
 
   let totalPrice = 0;
   let totalItems = 0;
 
+  //SJÄLVA CART + ITEMS, vad som händer med vad
+
   cartItems.forEach((item) => {
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
+    const cartItem = document.createElement("div"); //Jämför med HTML Koden
+    cartItem.classList.add("cart-item"); //Vad är det som hamnar vart?
 
     const cartItemInner = document.createElement("div");
     cartItemInner.classList.add("cart-item-inner");
@@ -59,9 +63,13 @@ export function updateCart() {
     const cartItemPrice = document.createElement("p");
     cartItemPrice.innerText = `${item.price * item.quantity} SEK`;
 
+    //ALLT OVAN skapar constants för respektive div/id element i HTML
+
     cartItemInner.appendChild(cartItemName);
     cartItemInner.appendChild(cartDivider);
     cartItemInner.appendChild(cartItemPrice);
+
+    //DESSA SER TILL ATT FUNKTIONER OCH DYLIKT ÄRVS
 
     const cartItemCounter = document.createElement("div");
     cartItemCounter.classList.add("cart-item-counter");
@@ -121,3 +129,4 @@ export function updateCart() {
     payButton.classList.add("active");
   }
 }
+//ALL DENNA KODEN ÄR FÖR EN "SIDA", klicka på korgen och inspektera
