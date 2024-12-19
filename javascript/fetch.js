@@ -1,7 +1,7 @@
 import { cartManager } from "./cart.js";
 
 const APIkey = "yum-NKsTcw3OPrMQPoSz"; //Min egen API nyckel
-const tenant = "eqjp";
+const tenant = "erjp";
 let wontonItems = [];
 //Hämta från nyckeln och en egen tenant, sätt items på 0/eller "tom"
 
