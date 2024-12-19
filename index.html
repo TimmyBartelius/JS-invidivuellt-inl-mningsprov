@@ -3,60 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css"></link>
-    <title>Matapp</title>
+    <title>YUM YUM GIM MI SUM</title>
+
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=OtQ3nMjnl7GI&format=png&color=000000"
+      type="image/x-icon"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- JS -->
+    <script type="module" src="./javascript/script.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="cart" id="shopping-cart">
-        <button id="shoppingCart"><p id="upper"></p><p id="lower"></p></button>
-    </div>
-    <article class="menysystem">
-    <section class="menyValMat">
-      <h1 id="menytexten">MENY</h1>
-      <div class="matval-1">
-      <h3>KARLSTAD..............9SEK</h3>
-      <p id="matbeskrivning1">Kantarell, scharlottenlök, morot, bladpersilja</p>
+    <section id="menu" class="display-flex">
+      <div class="cart-box">
+        <button class="cart-button">
+          <span class="total-items"></span>
+          <img src="svg/cart.svg" alt="shopping cart" />
+        </button>
       </div>
-      <div class="matval-2">
-        <h3>BANGKOK..............9SEK</h3>
-        <p id="matbeskrivning2">Morot, salladslök, chili, kokos, lime, koriander</p>
+      <h2 id="menu-header">MENY</h2>
+      <div id="menu-container"></div>
+
+      <div class="submenu-container">
+        <div class="submenu-inner">
+          <p class="submenu-header">DIPSÅS</p>
+          <div class="dotted-divider"></div>
+          <p class="submenu-header dip-price"></p>
         </div>
-        <div class="matval-3">
-            <h3>HO CHI MINH..............9SEK</h3>
-            <p id="matbeskrivning3">Kål, salladslök, chili, vitlök, ingefära, tofu</p>
-            </div>
-            <div class="matval-4">
-                <h3>PARIS..............9SEK</h3>
-                <p id="matbeskrivning4">Kål, chevré, honung, basilika, valnötspasta</p>
-                </div>
-                <div class="matval-5">
-                    <h3>OAXACA..............9SEK</h3>
-                    <p id="matbeskrivning5">Majs, tomat, rostade ärtor, vitlök, lime</p>
-                    </div>
-    </section>
-    <section class="menyValDip">
-      <h1>DIPSÅS...................19SEK</h1>
-      <div class="dipBtns">
-      <button id="sweetChiliBtn">Sweet Chili</button>
-      <button id="wontonStdBtn">Wonton STD</button>
-      <button id="sweetsourBtn">Sweet & Sour</button>
-      <button id="hotMangoBtn">Hot Mango</button>
-      <button id="chiliMayoBtn">Chilimayo</button>
-      <button id="guacamoleBtn">Guacamole</button>
+        <div class="submenu-selections" data-type="dip"></div>
+      </div>
+      <div class="submenu-container">
+        <div class="submenu-inner">
+          <p class="submenu-header">DRICKA</p>
+          <div class="dotted-divider"></div>
+          <p class="submenu-header drink-price"></p>
+        </div>
+        <div class="submenu-selections" data-type="drink"></div>
       </div>
     </section>
-    <section class="menyValDricka">
-      <h1>DRICKA......................19SEK</h1>
-      <div class="drinkBtns">
-      <button id="fantaOrangeBtn">Fanta Orange</button>
-      <button id="fantaExoticBtn">Fanta Exotic</button>
-      <button id="cocaColaBtn">Coca-cola</button>
-      <button id="spriteBtn">Sprite</button>
-      <button id="lokaGranatBtn">LOKA Granatäpple</button>
-      <button id="lokaCitrusBtn">LOKA Citrus</button>
+
+    <div id="cart">
+      <div class="icon-container">
+        <button class="cart-return-button">
+          <img src="svg/cart.svg" alt="icon for shopping cart" id="cart-icon" />
+        </button>
+      </div>
+
+      <div id="cart-inner-container"></div>
+
+      <div class="cart-bottom-container">
+        <div class="price-info">
+          <div class="price-inner">
+            <p class="total-text">TOTALT</p>
+            <p>inkl 20% moms</p>
+          </div>
+          <p class="total-price"></p>
+        </div>
+        <button class="pay-button" disabled>VARUKORGEN ÄR TOM!</button>
+      </div>
+    </div>
+
+    <section id="eta">
+      <div class="eta-img-container">
+        <img
+          src="./img/box-top.png"
+          alt="picture of wonton box"
+          class="wonton-box"
+        />
+      </div>
+      <h2 class="eta-header">DINA WONTON TILLAGAS!</h2>
+      <p class="time-estimate">ETA 5 MIN</p>
+      <p class="order-id"></p>
+      <div class="eta-button-container">
+        <button class="eta-buttons receipt">SE KVITTO</button>
+        <button class="eta-buttons new-order">GÖR EN NY BESTÄLLNING</button>
       </div>
     </section>
-</article>
-    <script src="script.js"></script>
+
+    <section id="receipt-section">
+      <div class="receipt-container">
+        <img src="./svg/logo.svg" alt="YUM YUM GIM MI SUM logo" class="logo" />
+        <h2 class="receipt-header">KVITTO</h2>
+        <p class="receipt-id">#hsadjfu</p>
+        <div class="receipt-inner"></div>
+      </div>
+      <div class="receipt-total-container">
+        <div class="receipt-total-inner">
+          <p class="receipt-total-text">TOTALT</p>
+          <p>inkl 20% moms</p>
+        </div>
+        <p class="receipt-total">120SEK</p>
+      </div>
+      <button class="receipt-new-order">GÖR EN NY BESTÄLLNING</button>
+    </section>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const apiKey = "yum-NKsTcw3OPrMQPoSz";
+
 async function getApiKey() {
   const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/keys";
 
@@ -19,4 +21,4 @@ async function getApiKey() {
     console.error("Error fetching api key", error);
   }
 }
-getApiKey();
+// getApiKey();
