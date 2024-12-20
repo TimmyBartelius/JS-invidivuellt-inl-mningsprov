@@ -8,14 +8,8 @@ export function animateToCart(buttonElement) {
   ball.classList.add("animated-ball");
   document.body.appendChild(ball);
 
-  ball.style.position = "absolute";
-  ball.style.zIndex = "1000";
   ball.style.top = `${itemRect.top + window.scrollY}px`;
   ball.style.left = `${itemRect.left + window.scrollX}px`;
-  ball.style.width = "20px";
-  ball.style.height = "20px";
-  ball.style.borderRadius = "50%";
-  ball.style.backgroundColor = "red";
 
   requestAnimationFrame(() => {
     const translateX =
@@ -29,7 +23,7 @@ export function animateToCart(buttonElement) {
 
     ball.style.transform = `translate(${translateX}px, ${translateY}px) scale(0.3)`;
     ball.style.transition =
-      "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s";
+      "transform 1s cubic-bezier(1, 0, 0.2, 5), opacity 0.5s";
 
     setTimeout(() => {
       ball.style.opacity = "0";

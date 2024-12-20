@@ -132,3 +132,12 @@
 .cart-return-button:hover {
   scale: 1.1;
 }
+
+.animated-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 1000;
+  position: absolute;
+}
