@@ -1,4 +1,4 @@
 https://github.com/TimmyBartelius/JS-invidivuellt-inl-mningsprov.git - git repository
 https://timmybartelius.github.io/JS-invidivuellt-inl-mningsprov/ - Hemsidans länk
 
-https://l.facebook.com/l.php?u=https%3A%2F%2Fthorengruppen-my.sharepoint.com%2F%3Aw%3A%2Fr%2Fpersonal%2Ftimmy_bartelius_student_nbi-handelsakademin_se%2F_layouts%2F15%2Fdoc2.aspx%3Fsourcedoc%3D%257B34021C14-7E83-4CE9-98A5-D5933C231575%257D%26file%3DDokument.docx%26action%3Deditnew%26mobileredirect%3Dtrue%26wdNewAndOpenCt%3D1734688123806%26ct%3D1734688124355%26wdOrigin%3DOFFICECOM-WEB.MAIN.NEW%26wdPreviousSessionSrc%3DHarmonyWeb%26wdPreviousSession%3D94062e6c-a94f-46e8-adc7-e895b142037c%26cid%3D410fa680-3291-4036-ad55-520b30e29dc3%26fbclid%3DIwZXh0bgNhZW0CMTAAAR0ec57d67eEfqA2tUhj3q6xiJfG8uPhe5eMlgotTC2uATFCRfOh5J1URUs_aem_37tZJKzpLAhTE4eLT2FY_w&h=AT0G46V-p6BEDVhkM8mF8uu0VCfCkri2GhXuVaslPKFsN5mpSUBLln33PS_3SanO9FcGCBM3uu3XN12yqFyXNQUN_RENdwc7GouzZ5dK7PRAzt9z1JuC1pHYf599F73xmXWzSs48clBBGtBNd2Y - Rapport-länk
+https://docs.google.com/document/d/e/2PACX-1vRHBNucLp38WjxcpFl7csCNPLyZAW_kdrFiLQQU3Z8ifVRmQrF_rDaZB-YNQf5GcPEpbkVZMuqICLqd/pub - Rapport länkad till Google Docs
